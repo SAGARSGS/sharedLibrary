@@ -6,9 +6,9 @@ def newMaven()
 {
     sh 'mvn package'
 }
-def newDeploy(ip,filename.war)
+def newDeploy(ip,filename)
 {
-    sh 'scp /home/ubuntu/.jenkins/workspace/SharedLibrary/webapp.war ubuntu@"${ip}":/var/lib/tomcat9/webapps/"${filename.war}'
+    sh scp /home/ubuntu/.jenkins/workspace/SharedLibrary/webapp.war ubuntu@"${ip}":/var/lib/tomcat9/webapps/"${filename}".war
 }
 def newTest(appname)
 {
