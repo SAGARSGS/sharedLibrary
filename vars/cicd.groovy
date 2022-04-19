@@ -8,10 +8,10 @@ def newMaven()
 }
 def newDeploy(ip,filename)
 {
-    sh scp /home/ubuntu/.jenkins/workspace/SharedLibrary/webapp.war ubuntu@"${ip}":/var/lib/tomcat9/webapps/"${filename}".war
+     sh "scp /home/ubuntu/.jenkins/workspace/SharedLibrary/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${filename}.war"
 }
 def newTest(appname)
 {
-     sh 'java -jar /home/ubuntu/.jenkins/workspace/"${appname}"/testing.jar'
+     sh "java -jar /home/ubuntu/.jenkins/workspace/${appname}/testing.jar"
 }
 
