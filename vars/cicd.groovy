@@ -12,7 +12,7 @@ def newDeploy(j,ip,f)
 }
 def newTest(appname)
 {
-     sh 'java -jar /home/ubuntu/.jenkins/workspace/"${appname}"/testing.jar'
+     'sh java -jar /home/ubuntu/.jenkins/workspace/"${appname}"/testing.jar'
 }
 
 
